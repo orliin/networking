@@ -1,0 +1,6 @@
+net add vxlan vxlan<VLAN ID> vxlan id <VLAN ID>
+net add vxlan vxlan<VLAN ID> vxlan local-tunnelip <SWITCH LOOPBACK IP>
+net add vxlan vxlan<VLAN ID> bridge learning off
+net add vxlan vxlan<VLAN ID> mtu 9216
+net add vxlan vxlan<VLAN ID> bridge access <VLAN ID>
+
