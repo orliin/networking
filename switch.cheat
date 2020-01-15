@@ -1,0 +1,48 @@
+Enter "configuration mode":
+Arista: 
+enable
+Cumulus:
+sudo su - 
+
+Check pending configuration:
+Arista:
+Not really such thing. In some cases "show active" does this
+Cumulus:
+net pending
+
+Commit configuration:
+Arista:
+Instantly committed, but not permanent after restart. To make permanent:
+copy running-config startup-config
+Cumulus:
+net commit
+
+Check the current configuration
+Arista:
+show run
+Cumulus:
+net show configuration commands
+net show configuration interface
+cat /etc/network/interfaces
+
+Arista:
+show interfaces description
+show interfaces status
+show lldp neighbors
+Cumulus:
+net show interfaces
+
+Arista:
+show vlan <vlan id>
+Cumulus:
+net show bridge vlan <vlan id>
+
+Arista:
+show mac address-table vlan <vlan id>
+Cumulus:
+net show bridge macs vlan <vlan id>
+
+Arista:
+show interfaces status | grep Po
+Cumulus:
+net show interface bonds
